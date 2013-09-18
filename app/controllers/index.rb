@@ -11,5 +11,5 @@ post '/rolls' do
 
   @roll = value ? Roll.create({ value: value }) : Roll.create
 
-  erb :index  # HINT: what does this do? what should we do instead?
+  erb :_die, layout: false, locals: { roll: @roll }  # HINT: what does this do? what should we do instead?
 end
